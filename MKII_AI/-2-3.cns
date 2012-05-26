@@ -234,8 +234,8 @@ var(59) = 2**9
 trigger1 = 1
 type = DisplayToClipboard
 ignorehitpause = 1
-text = "%d %d\n "
-params = var(59)&(2**9), helper(11000),var(28)
+text = "%d \n "
+params = var(59)
 
 ;=======================================================================
 

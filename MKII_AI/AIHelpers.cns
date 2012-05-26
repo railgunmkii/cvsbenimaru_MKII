@@ -94,7 +94,7 @@ var(28) = enemynear,stateno
 [State 11000, Config]
 type = varset
 trigger1 = var(59)=0
-var(59) = 1;Set to 1 to make AI always on
+var(59) = 0;Set to 1 to make AI always on
 
 ;-------------------------------------------------------------------------
 ;Friction

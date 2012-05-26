@@ -482,6 +482,7 @@ triggerall = roundstate = 2
 triggerall = statetype != A
 triggerall = var(36) = 1 && (0&&stateno = 1300 && animelemtime(3)>0 || stateno = 1150 && animelem = 13) || stateno = 1000 && animelemtime(7)>0 && (var(28)+var(30)=var(5)+1)
 triggerall = enemynear,stateno != [120,155]
+triggerall = EnemyNear,GetHitVar(hittime)>1
 trigger1 = (var(20) = 2 && Power >= 3000) || (var(20) = 6 && (Power >= 3000-2000*var(15)) && !var(16))
 trigger1 = var(5):=2
 trigger2 = (var(20) = 6 && Power = [2000,2999]) && !var(15)
@@ -497,6 +498,7 @@ triggerall = roundstate = 2
 triggerall = statetype != A
 triggerall = var(36) = 3 && !var(16)
 triggerall = (!var(20)||var(20)=6)
+triggerall = EnemyNear,GetHitVar(hittime)>1
 trigger1 = stateno = 3000 && var(5) = 1
 trigger1 = var(28)+var(30)=7
 trigger1 = var(5) := 2
@@ -519,6 +521,20 @@ trigger2 = var(5) := 1
 trigger3 = p2bodydist x + enemynear,vel x*(1-helper(11000),fvar(22)**6)/(1-helper(11000),fvar(22)) <= 24
 trigger3 = EnemyNear,GetHitVar(hittime)>=4
 trigger3 = var(5) := 0||1
+
+[State AI, Shinkuu Cancel]
+type = changestate
+value = 1200
+triggerall = var(59)
+triggerall = roundstate = 2
+triggerall = statetype != A
+triggerall = var(36) = 2 && random <= 600 || var(36) = 1 && random <= 200
+triggerall = !var(16)
+triggerall = StateNo = 430 || stateno = 410 || stateno = 201 || stateno = 211 || stateno = 241
+triggerall = enemynear, statetype != A
+trigger1 = p2bodydist x + enemynear,vel x*(1-helper(11000),fvar(22)**13)/(1-helper(11000),fvar(22)) <= 90
+trigger1 = EnemyNear,GetHitVar(hittime)>=11
+trigger1 = var(5) := 2
 
 [State AI, Raijin Ken Cancel]
 type = changestate
@@ -549,6 +565,7 @@ triggerall = statetype != A
 triggerall = enemynear,statetype != A
 triggerall = var(36) = 1
 triggerall = stateno = 220 || stateno = 240 || stateno = 440 || stateno = 420 || stateno = 410
+triggerall = EnemyNear,GetHitVar(hittime)>1
 trigger1 = ((!var(20) || var(20) = 2 || (var(20) = 6 && !var(16))) && Power >= 3000) || (var(20) = 3 && (100*life/const(data.life))<=30 && var(14)) || (var(15) && Power >= 1000) || (var(0)&2**3) 
 trigger1 = helper(11000),var(47) <= 370 || random <= 500 || var(20)!=1 && var(20)!=6
 trigger1 = var(5):=2
@@ -780,7 +797,7 @@ value = 100
 
 [state AI, charge]
 type = changestate
-triggerall = 1;var(59)
+triggerall = var(59)
 triggerall = statetype != A
 triggerall = roundstate = 2
 triggerall = enemynear, movetype = I || var(40) = 0 || var(40) = 1 || (enemynear,stateno = [3105,3107])&&numtarget
