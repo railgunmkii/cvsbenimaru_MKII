@@ -1,0 +1,33 @@
+[Info]
+name = "cvsbenimaru"		;二階堂紅丸(cvs)
+displayname = "Benimaru(MKII)"	;紅丸
+versiondate=09,08,2011	;Version date of character
+mugenversion=06,14,2003	;Version of M.U.G.E.N character works on
+author="Warusaki3"		;悪咲3号
+Pal.Defaults=4,5
+
+[Files]
+cmd=MKII_AI/cvsbenimaru_AI.cmd
+cns=MKII_AI/cvsbenimaru_AI.cns
+st=MKII_AI/cvsbenimaru_AI.cns
+st1=MKII_AI/cvs_common_AI.cns
+st2=groove.cns
+st3=config.txt
+st4=MKII_AI/AIhelpers.cns
+st5=MKII_AI/-2-3.cns
+stcommon=common1.cns
+sprite=cvsbenimaru.sff
+anim=cvsbenimaru.air
+sound=cvsbenimaru.snd
+pal1=act004.act;カプエス2弱Kカラー
+pal2=act005.act;カプエス2中Kカラー
+pal3=act006.act;カプエス2強Kカラー
+pal4=act001.act;カプエス2弱Pカラー
+pal5=act002.act;カプエス2中Pカラー
+pal6=act003.act;カプエス2強Pカラー
+pal7=act010.act;オリジナルカラー2
+pal8=act011.act;オリジナルカラー3
+pal9=act012.act;オリジナルカラー4
+pal10=act007.act;カプエス2P同時押しカラー
+pal11=act008.act;カプエス2K同時押しカラー
+pal12=act009.act;オリジナルカラー1（どこぞの二刀流の人っぽく）
